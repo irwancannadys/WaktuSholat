@@ -9,6 +9,9 @@ import retrofit2.http.Query;
 
 public interface ApiServices {
 
-    @GET("api/pray-times?&timezone=7&method=0&year=2017&month=10&day=6")
-    Call<Example> getData(@Query("address") String address);
+    @GET("api/pray-times?&timezone=7&method=0")
+    Call<Example> getData(@Query("address") String address,
+                          @Query("year") String year,
+                          @Query("month") String month,
+                          @Query("day") String day);
 }
